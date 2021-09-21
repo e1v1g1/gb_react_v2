@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.css';
+
+import {ListGroup} from "./components/listGroup";
+import {ListGroupItem} from "./components/listGroupItem"
+
+
+console.log(styles);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.app}>
+
+      <ListGroup>
+        <ListGroupItem tag={'a'} active={true}>
+          Item 1
+        </ListGroupItem>
+        <ListGroupItem disabled={true}>
+          Item 2
+        </ListGroupItem>
+        <ListGroupItem>
+          Item 3
+        </ListGroupItem>
+      </ListGroup>
+
     </div>
   );
 }

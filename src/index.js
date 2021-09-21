@@ -1,8 +1,33 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+// const elementLi = React.createElement('li', {
+//     className: 'li'
+// }, 'List element')
+
+// const elementUl = React.createElement('ul', {
+//     className: 'ul'
+// }, elementLi, elementLi, elementLi, elementLi, elementLi)
+
+
+//+++++++++++++++++++++ JSX +++++++++++++
+// const elementLiJSX = <li className='li'>element_JSX</li>
+//
+// const elementUlJSX = <ul className ='ul'>
+//     {elementLiJSX}
+//     {elementLiJSX}
+//     {elementLiJSX}
+//     {elementLiJSX}
+//
+// </ul>
+//ReactDOM.render(elementUlJSX, document.getElementById('root'));
+
+//++++++++++++++++++++++++++++++++++++++++++++
+
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -10,8 +35,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
