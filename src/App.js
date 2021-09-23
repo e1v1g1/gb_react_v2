@@ -2,13 +2,13 @@ import styles from './App.module.css';
 
 import {ListGroup} from "./components/listGroup";
 import {ListGroupItem} from "./components/listGroupItem";
-import Message from "./components/message";
+import Message from "./components/message1";
 
 
 console.log(styles);
 
-const message = "Передаем в компонент Message пропс messageText. Передаем в компонент Message пропс messageText. Передаем в компонент Message пропс messageText. Передаем в компонент Message пропс messageText.";
-const messageCount = "1"; //еще один props
+const message1 = "Передаем в компонент Message пропс messageText1. Передаем в компонент Message пропс messageText. Передаем в компонент Message пропс messageText. Передаем в компонент Message пропс messageText.";
+const messageCount1 = "1"; //еще один props
 
 function App() {
   return (
@@ -25,8 +25,8 @@ function App() {
           Item 3
         </ListGroupItem>
       </ListGroup>
-      <Message messageText={message} count={messageCount}/>
-      <Message messageText={message} count='2'/>
+      <Message messageText={message1} count={messageCount1}/>
+      <Message messageText={message1} count='2'/>
 
     </div>
   );
