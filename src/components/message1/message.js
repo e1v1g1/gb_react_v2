@@ -12,5 +12,5 @@ const Message =(props) => {
     );
 }
 
-
+//Тут сделал экспорт default.
 export default Message;
