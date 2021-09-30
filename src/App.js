@@ -1,9 +1,15 @@
 import React from 'react';
 //import faker from 'faker';
 
+import ReactDOM from 'react-dom';
+import Button from '@material-ui/core/Button';
+import Switch from '@material-ui/core/Switch';
+
+
 import styles from './App.module.css';
 
 import {ChatWindow} from "./components/ChatWindow";
+import {ChatList} from "./components/ChatList"
 
 
 
@@ -20,6 +26,8 @@ function App() {
    return (
     <div className={styles.app}>
         <ChatWindow />
+        <h6>Dark theme switch</h6>
+        <Switch />
     </div>
   );
 }

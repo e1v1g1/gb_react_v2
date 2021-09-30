@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {ChatInput} from "../ChatInput";
 
 import './ChatWindow.css'
+import {ChatList} from "../ChatList";
 
 
 export const ChatWindow = () => {
@@ -26,8 +27,12 @@ export const ChatWindow = () => {
 
 
     return (
-        <div className='container-md chatWindowContainer'>
-            <h4>Chat window</h4>
+        <container maxWidth="sm">
+            <div>
+                <ChatList />
+            </div>
+            <div>
+                <h4>Chat window</h4>
                 <div className="chatMessageContainer">
                     {messageList.map((el, i) => {
                         return (
@@ -37,11 +42,14 @@ export const ChatWindow = () => {
                             </div>
                         );
                     })}
+                </div>
+
+
+                <ChatInput changeMessageList={changeMessageList}/>
+
             </div>
 
-
-            <ChatInput changeMessageList={changeMessageList}/>
-        </div>
+        </container>
 
     );
 }
