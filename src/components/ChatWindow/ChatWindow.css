@@ -1,0 +1,26 @@
+.chatWindowContainer {
+    border: solid 1px lightgray;
+    border-radius: 2px;
+    min-height: 200px;
+}
+
+.chatMessageContainer {
+    border: solid 1px lightgray;
+    border-radius: 2px;
+    min-height: 200px;
+    margin: 15px;
+}
+
+.chatInput {
+    margin: 15px;
+}
+
+.chatMessage {
+    display: flex;
+}
+
+.chatMessage-author {
+    font-weight: bold;
+    color: darkslateblue;
+    margin-right: 10px;
+}
