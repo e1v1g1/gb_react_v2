@@ -1,34 +1,52 @@
+import React from 'react';
+import {Routes} from "./routes/Routes";
+import {BrowserRouter} from "react-router-dom";
+import {Header} from "./components/Header";
+
+//import faker from 'faker';
+
 import styles from './App.module.css';
 
-import {ListGroup} from "./components/listGroup";
-import {ListGroupItem} from "./components/listGroupItem";
-import Message from "./components/message";
+
+/**
+ * /
+ * /posts
+ * /posts/:postId
+ *    /posts/:postId/comments
+ * /profile
+ *    /profile/albums
+ *    /profile/settings
+ *    /profile/favorites
+ * /Chats
+ * /not-found
+ * */
 
 
-console.log(styles);
+// // генератор списка
+// const list = Array.from( {
+//         length: 5
+// }).map(() => faker.name.findName());
+// console.log(list);
 
-const message = "Передаем в компонент Message пропс messageText. Передаем в компонент Message пропс messageText. Передаем в компонент Message пропс messageText. Передаем в компонент Message пропс messageText.";
-const messageCount = "1"; //еще один props
+
 
 function App() {
-  return (
-    <div className={styles.app}>
 
-      <ListGroup>
-        <ListGroupItem tag={'a'} active={true}>
-          Item 1
-        </ListGroupItem>
-        <ListGroupItem disabled={true}>
-          Item 2
-        </ListGroupItem>
-        <ListGroupItem>
-          Item 3
-        </ListGroupItem>
-      </ListGroup>
-      <Message messageText={message} count={messageCount}/>
-      <Message messageText={message} count='2'/>
 
-    </div>
+   return (
+       <BrowserRouter>
+           <div className={styles.app}>
+               <Header />
+               {/*<Layout>*/}
+
+               {/*</Layout>*/}
+               <Routes />
+               {/*<h1>x</h1>*/}
+               {/*<ChatWindow />*/}
+               {/*<Switch spacing={2}/>*/}
+               {/*<h6>Dark theme switch</h6>*/}
+           </div>
+       </BrowserRouter>
   );
 }
 
