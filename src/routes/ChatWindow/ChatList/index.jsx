@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
@@ -27,8 +26,6 @@ export const ChatList = () => {
      const [secondary, setSecondary] = React.useState(false);
 
 
-
-
 return (
     <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
@@ -38,7 +35,7 @@ return (
             <Demo>
                 <List dense={dense}>
                     {generate(
-                        <ListItem divider>
+                        <ListItem >
                             <ListItemAvatar>
                                 <Avatar>
                                     <AccountBox />

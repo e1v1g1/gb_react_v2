@@ -1,6 +1,5 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import Input from '@material-ui/core/Input';
 
 
@@ -8,9 +7,6 @@ import Input from '@material-ui/core/Input';
 import './ChatInput.css'
 
 export const ChatInput = (props) => {
-
-    const inputRef = useRef(null);
-
 
     //Создаем стейт для  сообщений
     const [chatMessage, setChatMessage] = useState({
@@ -37,6 +33,7 @@ export const ChatInput = (props) => {
     return (
         <div className="chatInput">
             <Input
+                sx={{ width: '25%' }}
                 type="text"
                 placeholder="author"
                 onChange={handleChangeAuthor}
@@ -48,10 +45,13 @@ export const ChatInput = (props) => {
                 placeholder="Input message"
                 onChange={handleChangeMessage}
                 value={chatMessage.chatText}
-                ref={inputRef}
+                sx={{ ml: 2 }}
             />
-            <Button variant="contained"
-                onClick={handleSubmit}>
+            <Button
+                variant="contained"
+                onClick={handleSubmit}
+                sx={{ ml: 2 }}
+            >
                 Send
             </Button>
         </div>
